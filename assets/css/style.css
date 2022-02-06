@@ -1,7 +1,53 @@
 body {
     font-size: 16px;
-    display: flex;
     background-color: var(--secondary-color);
     color: var(--tertiary-color)
 }
 
+header {
+    padding: 20px 40px;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 10px rgba(0,0,0, 0.5);
+    z-index: 9999;
+}
+
+header h1 {
+    font-weight: bold;
+    margin: 20px;
+    font-size: 45px;
+    text-shadow: 3px 3px 4px rgba(0,0,0, 0.5);
+    display: flex;
+}
+
+header a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+header nav ul li {
+    padding: 10px 20px;
+    border:var(--secondary-color);
+    border-style: solid;
+    border-right: 3px;
+    border-top: 3px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.2vw;
+    margin: 4px;
+}
