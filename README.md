@@ -14,7 +14,7 @@ A website that showcases my work as a web designer and is responsive to various 
 
 [My Portfolio](https://tneswick.github.io/My-Portfolio/)
 
-![Screenshot of my Portfolio]()
+![Screenshot of my Portfolio](https://raw.githubusercontent.com/Tneswick/My-Portfolio/main/My-Portfolio-Screenshot.png)
 
 ## Contribution
 
