@@ -13,31 +13,31 @@ main {
 /* header styles start */
 
 header {
-    padding: 0 40px;
     background-color: var(--tertiary-color);
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     box-shadow: 1px 1px 10px rgba(0,0,0, 0.5);
     z-index: 9999;
-    min-width: 100%;
+    min-width: 100vw;
 }
 
-header div {
+header div h1 {
     font-weight: bold;
-    margin: 20px;
+    margin: 20px 5px 20px 20px;
     font-size: 45px;
     text-shadow: 3px 3px 4px rgba(0,0,0, 0.5);
-    display: flex;
     padding: 10px;
     border:var(--primary-color);
     border-style: solid;
     border-right: 2px;
     border-top: 2px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
 }
 
-header div:hover {
+header div h1:hover {
     border-color: white;
 }
 
@@ -71,7 +71,7 @@ header nav ul li {
     align-items: center;
     justify-content: center;
     display: flex;
-    font-size: 1.2vw;
+    font-size: 20px;
     margin: 6px;
 }
 
@@ -83,6 +83,7 @@ header nav ul li:hover {
 .bio-top {
     display: flex;
     justify-content: center;
+    flex: 0 3 80%;
 }
 
 .bio-section-container {
@@ -100,9 +101,10 @@ header nav ul li:hover {
     box-shadow: 1px 8px 5px rgba(0,0,0, 0.5);
 }
 
-.bio-bottom{
+.bio-bottom {
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 .bio-bottom article {
     width: 50%;
@@ -113,61 +115,47 @@ header nav ul li:hover {
 
 /* work section styles */
 
-#work .section-header {
-    display: flex;
-    justify-content: center;
-    margin: 70px 0 30px 0;
-}
-
-.work-anchors {
+#work {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.first-anchor {
+#work .section-header {
+    width:auto;
+    margin-bottom: 40px;
+    flex: 0 5 50%;
+}
+
+#work div h2 {
+    width: 100%;
+}
+
+.work-anchors {
     display: flex;
-    justify-content: center;
-}
-
-.first-anchor a {
-    display: flex;
-    flex: 0 70%;
-    min-width: 0;
-}
-
-.first-anchor a img {
-    max-width: 1000px;
-    min-width: 0;
-    border: 5px solid var(--primary-color);
-}
-
-.first-anchor a img:hover {
-    border-color: white;
-}
-
-.secondary-anchors {
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.secondary-anchors a {
+.work-anchors a {
     display: flex;
-    flex: 1;
-    min-width: 0;
-    margin: 45px;
+    flex: 0 1 40%;
+    margin: 5px;
 }
 
-.secondary-anchors a img {
-    max-width: 455px;
-    min-width: 0;
-    border: 5px solid var(--primary-color);
+.work-anchors a img {
+    width: 100%;
+    border: 4px solid var(--primary-color);
 }
 
-.secondary-anchors a img:hover {
+.work-anchors a img:hover {
     border-color: white;
 }
+
+.work-anchors .first-work {
+    flex: 0 5 65%;
+}
+
 /* contact section styles */
 
 .contact-section {
@@ -244,14 +232,70 @@ header nav ul li:hover {
 
 .section-header {
     display: flex;
-    margin: 25px 0px 15px 10px;
     font-size: 130px;
     align-items: center;
-    flex: 0 5 15%;
 }
 
 /* Media Queries */
 
+@media screen and (max-width: 980px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .section-header {
+        font-size: 100px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 768px) {
-    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-header {
+        font-size: 75px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header div h1 {
+       display: inline-block; 
+       font-size: 30px;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .bio-section-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-header {
+        font-size: 50px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .social-container div a img {
+        max-width: 50px;
+    }
 }
